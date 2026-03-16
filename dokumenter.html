@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dokumenter — Grundejerforeningen Alslev Nord</title>
+  <meta name="description" content="Dokumenter fra Grundejerforeningen Alslev Nord. Referater, årsberetninger, vedtægter, budgetter, regnskaber og lokalplaner.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/svg+xml" href="brand_assets/favicon.svg">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dokumenter — Grundejerforeningen Alslev Nord">
+  <meta property="og:description" content="Referater, årsberetninger, vedtægter, budgetter, regnskaber og lokalplaner fra Grundejerforeningen Alslev Nord.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alslevnord.dk/dokumenter.html">
+  <meta property="og:locale" content="da_DK">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              50: '#f4f7f2',
+              100: '#e6ede2',
+              200: '#cedbc6',
+              300: '#a8c29b',
+              400: '#7da56c',
+              500: '#5c884a',
+              600: '#476d38',
+              700: '#39572e',
+              800: '#2f4626',
+              900: '#1e2e19',
+              950: '#111a0e',
+            },
+            earth: {
+              50: '#faf8f5',
+              100: '#f2ede6',
+              200: '#e5dace',
+              300: '#d4c2ad',
+              400: '#bfa388',
+              500: '#a8876a',
+              600: '#8f6e54',
+              700: '#755846',
+              800: '#5e483b',
+              900: '#4a3a31',
+            },
+          },
+          fontFamily: {
+            display: ['"DM Serif Display"', 'serif'],
+            body: ['"Outfit"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; line-height: 1.7; color: #2f4626; }
+    h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; letter-spacing: -0.03em; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f4f7f2; }
+    ::-webkit-scrollbar-thumb { background: #a8c29b; border-radius: 4px; }
+
+    .grain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .btn-spring {
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    }
+    .btn-spring:hover { transform: translateY(-2px); }
+    .btn-spring:active { transform: translateY(0px); }
+
+    .card-lift {
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+    }
+    .card-lift:hover { transform: translateY(-4px); }
+
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #476d38;
+      transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .nav-link:hover::after,
+    .nav-link:focus-visible::after { width: 100%; }
+
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .mobile-menu.open { transform: translateX(0); }
+
+    /* Category filter */
+    .cat-btn { transition: background-color 0.3s ease, color 0.3s ease; }
+    .cat-btn.active { background-color: #39572e; color: white; }
+  </style>
+</head>
+<body class="bg-forest-50">
+
+  <!-- ==================== HEADER ==================== -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="transition-property: background-color, box-shadow, padding;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 relative z-50">
+        <img src="brand_assets/logo-white.svg" alt="Grundejerforeningen Alslev Nord" class="h-10" id="header-logo">
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html#om" class="nav-link font-body text-sm font-medium tracking-wide uppercase text-white/90 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 focus-visible:ring-offset-2 rounded" id="nav-om">Om os</a>
+        <a href="index.html#bestyrelse" class="nav-link font-body text-sm font-medium tracking-wide uppercase text-white/90 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 focus-visible:ring-offset-2 rounded" id="nav-bestyrelse">Bestyrelse</a>
+        <a href="dokumenter.html" class="nav-link font-body text-sm font-medium tracking-wide uppercase text-white hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 focus-visible:ring-offset-2 rounded" id="nav-dokumenter" style="border-bottom: 2px solid rgba(255,255,255,0.5);">Dokumenter</a>
+        <a href="index.html#kontakt" class="btn-spring inline-flex items-center px-5 py-2.5 bg-forest-600 text-white text-sm font-medium rounded-full hover:bg-forest-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 focus-visible:ring-offset-2 shadow-lg shadow-forest-900/20" id="nav-kontakt">Kontakt os</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 rounded" aria-label="Menu">
+        <span class="block w-6 h-0.5 bg-white transition-transform duration-300" id="bar1"></span>
+        <span class="block w-6 h-0.5 bg-white transition-opacity duration-300" id="bar2"></span>
+        <span class="block w-6 h-0.5 bg-white transition-transform duration-300" id="bar3"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu fixed inset-0 z-40 bg-forest-950 flex flex-col items-center justify-center gap-8">
+    <a href="index.html" class="text-2xl font-display text-white/90 hover:text-white" onclick="closeMobile()">Forside</a>
+    <a href="index.html#om" class="text-2xl font-display text-white/90 hover:text-white" onclick="closeMobile()">Om os</a>
+    <a href="index.html#bestyrelse" class="text-2xl font-display text-white/90 hover:text-white" onclick="closeMobile()">Bestyrelse</a>
+    <a href="dokumenter.html" class="text-2xl font-display text-white hover:text-forest-300" onclick="closeMobile()">Dokumenter</a>
+    <a href="index.html#kontakt" class="text-2xl font-display text-white/90 hover:text-white" onclick="closeMobile()">Kontakt os</a>
+  </div>
+
+  <!-- ==================== PAGE HEADER ==================== -->
+  <section class="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-forest-900 grain overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-forest-600/15 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-1/4 w-80 h-80 bg-earth-500/8 rounded-full blur-3xl"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <a href="index.html" class="inline-flex items-center gap-2 text-forest-400 font-body text-sm mb-6 hover:text-forest-300 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 rounded">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+        Tilbage til forsiden
+      </a>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-display text-white leading-tight mb-4">Dokumenter</h1>
+      <p class="text-lg text-forest-300/70 font-body font-light max-w-xl mx-auto">
+        Referater, vedtægter, lokalplaner og andre relevante dokumenter for foreningen.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== CATEGORY FILTER ==================== -->
+  <section class="py-12 md:py-16 bg-forest-50">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      <!-- Filter buttons -->
+      <div class="flex flex-wrap gap-3 mb-10">
+        <button class="cat-btn active px-5 py-2 rounded-full text-sm font-body font-medium bg-forest-700 text-white border border-forest-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400" data-cat="all">Alle</button>
+        <button class="cat-btn px-5 py-2 rounded-full text-sm font-body font-medium bg-white text-forest-700 border border-forest-200 hover:bg-forest-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400" data-cat="referater">Referater</button>
+        <button class="cat-btn px-5 py-2 rounded-full text-sm font-body font-medium bg-white text-forest-700 border border-forest-200 hover:bg-forest-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400" data-cat="aarsberetninger">Årsberetninger</button>
+        <button class="cat-btn px-5 py-2 rounded-full text-sm font-body font-medium bg-white text-forest-700 border border-forest-200 hover:bg-forest-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400" data-cat="vedtaegter">Vedtægter</button>
+        <button class="cat-btn px-5 py-2 rounded-full text-sm font-body font-medium bg-white text-forest-700 border border-forest-200 hover:bg-forest-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400" data-cat="budgetter">Budgetter</button>
+        <button class="cat-btn px-5 py-2 rounded-full text-sm font-body font-medium bg-white text-forest-700 border border-forest-200 hover:bg-forest-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400" data-cat="regnskaber">Regnskaber</button>
+        <button class="cat-btn px-5 py-2 rounded-full text-sm font-body font-medium bg-white text-forest-700 border border-forest-200 hover:bg-forest-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400" data-cat="lokalplaner">Lokalplaner</button>
+        <button class="cat-btn px-5 py-2 rounded-full text-sm font-body font-medium bg-white text-forest-700 border border-forest-200 hover:bg-forest-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400" data-cat="oevrige">Øvrige</button>
+      </div>
+
+      <!-- ==================== DOCUMENT LIST ==================== -->
+      <!--
+        SÅDAN TILFØJER DU NYE DOKUMENTER:
+        1. Læg PDF-filen i den rigtige mappe under dokumenter/ (fx dokumenter/referater/)
+        2. Kopiér en af <a> blokkene nedenfor
+        3. Opdater: data-cat, titel, dato, og href til filen
+      -->
+
+      <div id="doc-list" class="space-y-4">
+
+        <!-- ===== REFERATER (17 filer, nyeste først) ===== -->
+        <a href="dokumenter/referater/Generalforsamling 2025.pdf" target="_blank" data-cat="referater" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Referat — Generalforsamling 2025</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Referat</span>
+              <span class="text-xs text-forest-400">PDF · 2025</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/referater/Generalforsamling 2023.pdf" target="_blank" data-cat="referater" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Referat — Generalforsamling 2023</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Referat</span>
+              <span class="text-xs text-forest-400">PDF · 2023</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/referater/Generalforsamling 2022.pdf" target="_blank" data-cat="referater" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Referat — Generalforsamling 2022</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Referat</span>
+              <span class="text-xs text-forest-400">PDF · 2022</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/referater/Generalforsamling 2021.pdf" target="_blank" data-cat="referater" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Referat — Generalforsamling 2021</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Referat</span>
+              <span class="text-xs text-forest-400">PDF · 2021</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/referater/Generalforsamling 2019.pdf" target="_blank" data-cat="referater" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Referat — Generalforsamling 2019</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Referat</span>
+              <span class="text-xs text-forest-400">PDF · 2019</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/referater/Generalforsamling 2018.pdf" target="_blank" data-cat="referater" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Referat — Generalforsamling 2018</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Referat</span>
+              <span class="text-xs text-forest-400">PDF · 2018</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/referater/Generalforsamling 2017.pdf" target="_blank" data-cat="referater" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Referat — Generalforsamling 2017</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Referat</span>
+              <span class="text-xs text-forest-400">PDF · 2017</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/referater/Generalforsamling 2016.pdf" target="_blank" data-cat="referater" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Referat — Generalforsamling 2016</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Referat</span>
+              <span class="text-xs text-forest-400">PDF · 2016</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/referater/Generalforsamling 2015.pdf" target="_blank" data-cat="referater" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Referat — Generalforsamling 2015</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Referat</span>
+              <span class="text-xs text-forest-400">PDF · 2015</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/referater/Generalforsamling 2014.pdf" target="_blank" data-cat="referater" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Referat — Generalforsamling 2014</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Referat</span>
+              <span class="text-xs text-forest-400">PDF · 2014</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/referater/Generalforsamling 2013.pdf" target="_blank" data-cat="referater" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Referat — Generalforsamling 2013</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Referat</span>
+              <span class="text-xs text-forest-400">PDF · 2013</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/referater/Generalforsamling 2012.pdf" target="_blank" data-cat="referater" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Referat — Generalforsamling 2012</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Referat</span>
+              <span class="text-xs text-forest-400">PDF · 2012</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/referater/Generalforsamling 2011.pdf" target="_blank" data-cat="referater" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Referat — Generalforsamling 2011</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Referat</span>
+              <span class="text-xs text-forest-400">PDF · 2011</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/referater/Generalforsamling 2010.pdf" target="_blank" data-cat="referater" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Referat — Generalforsamling 2010</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Referat</span>
+              <span class="text-xs text-forest-400">PDF · 2010</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/referater/Generalforsamling 2009.pdf" target="_blank" data-cat="referater" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Referat — Generalforsamling 2009</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Referat</span>
+              <span class="text-xs text-forest-400">PDF · 2009</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/referater/Generalforsamling 2008.pdf" target="_blank" data-cat="referater" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Referat — Generalforsamling 2008</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Referat</span>
+              <span class="text-xs text-forest-400">PDF · 2008</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/referater/Generalforsamling 2007.pdf" target="_blank" data-cat="referater" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Referat — Generalforsamling 2007</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Referat</span>
+              <span class="text-xs text-forest-400">PDF · 2007</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <!-- ===== ÅRSBERETNINGER (11 filer, nyeste først) ===== -->
+        <a href="dokumenter/aarsberetninger/Aarsberetning 2024.pdf" target="_blank" data-cat="aarsberetninger" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center group-hover:bg-amber-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Årsberetning 2024</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full">Årsberetning</span>
+              <span class="text-xs text-forest-400">PDF · 2024</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/aarsberetninger/Aarsberetning 2022.pdf" target="_blank" data-cat="aarsberetninger" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center group-hover:bg-amber-100 transition-colors duration-300"><svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Årsberetning 2022</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full">Årsberetning</span><span class="text-xs text-forest-400">PDF · 2022</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/aarsberetninger/Aarsberetning 2021.pdf" target="_blank" data-cat="aarsberetninger" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center group-hover:bg-amber-100 transition-colors duration-300"><svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Årsberetning 2021</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full">Årsberetning</span><span class="text-xs text-forest-400">PDF · 2021</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/aarsberetninger/Aarsberetning 2020.pdf" target="_blank" data-cat="aarsberetninger" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center group-hover:bg-amber-100 transition-colors duration-300"><svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Årsberetning 2020</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full">Årsberetning</span><span class="text-xs text-forest-400">PDF · 2020</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/aarsberetninger/Aarsberetning 2019.pdf" target="_blank" data-cat="aarsberetninger" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center group-hover:bg-amber-100 transition-colors duration-300"><svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Årsberetning 2019</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full">Årsberetning</span><span class="text-xs text-forest-400">PDF · 2019</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/aarsberetninger/Aarsberetning 2018.pdf" target="_blank" data-cat="aarsberetninger" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center group-hover:bg-amber-100 transition-colors duration-300"><svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Årsberetning 2018</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full">Årsberetning</span><span class="text-xs text-forest-400">PDF · 2018</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/aarsberetninger/Aarsberetning 2017.pdf" target="_blank" data-cat="aarsberetninger" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center group-hover:bg-amber-100 transition-colors duration-300"><svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Årsberetning 2017</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full">Årsberetning</span><span class="text-xs text-forest-400">PDF · 2017</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/aarsberetninger/Aarsberetning 2016.pdf" target="_blank" data-cat="aarsberetninger" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center group-hover:bg-amber-100 transition-colors duration-300"><svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Årsberetning 2016</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full">Årsberetning</span><span class="text-xs text-forest-400">PDF · 2016</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/aarsberetninger/Aarsberetning 2015.pdf" target="_blank" data-cat="aarsberetninger" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center group-hover:bg-amber-100 transition-colors duration-300"><svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Årsberetning 2015</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full">Årsberetning</span><span class="text-xs text-forest-400">PDF · 2015</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/aarsberetninger/Aarsberetning 2014.pdf" target="_blank" data-cat="aarsberetninger" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center group-hover:bg-amber-100 transition-colors duration-300"><svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Årsberetning 2014</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full">Årsberetning</span><span class="text-xs text-forest-400">PDF · 2014</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/aarsberetninger/Aarsberetning 2012.pdf" target="_blank" data-cat="aarsberetninger" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center group-hover:bg-amber-100 transition-colors duration-300"><svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Årsberetning 2012</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full">Årsberetning</span><span class="text-xs text-forest-400">PDF · 2012</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <!-- ===== VEDTÆGTER (4 filer) ===== -->
+        <a href="dokumenter/vedtaegter/Vedtaegter.pdf" target="_blank" data-cat="vedtaegter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-forest-50 flex items-center justify-center group-hover:bg-forest-100 transition-colors duration-300">
+            <svg class="w-6 h-6 text-forest-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Vedtægter for Grundejerforeningen Alslev Nord</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Vedtægt</span>
+              <span class="text-xs text-forest-400">PDF · gældende</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/vedtaegter/Aendring-af-vedtaegter-1.pdf" target="_blank" data-cat="vedtaegter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-forest-50 flex items-center justify-center group-hover:bg-forest-100 transition-colors duration-300"><svg class="w-6 h-6 text-forest-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Ændring af vedtægter (1)</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Vedtægt</span><span class="text-xs text-forest-400">PDF</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/vedtaegter/Aendring-af-vedtaegter-2.pdf" target="_blank" data-cat="vedtaegter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-forest-50 flex items-center justify-center group-hover:bg-forest-100 transition-colors duration-300"><svg class="w-6 h-6 text-forest-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Ændring af vedtægter (2)</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Vedtægt</span><span class="text-xs text-forest-400">PDF</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/vedtaegter/Aendring-af-vedtaegter-3.pdf" target="_blank" data-cat="vedtaegter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-forest-50 flex items-center justify-center group-hover:bg-forest-100 transition-colors duration-300"><svg class="w-6 h-6 text-forest-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Ændring af vedtægter (3)</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-forest-500 bg-forest-100 px-2 py-0.5 rounded-full">Vedtægt</span><span class="text-xs text-forest-400">PDF</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <!-- ===== BUDGETTER (15 filer) ===== -->
+        <a href="dokumenter/budgetter/Budget 2023.pdf" target="_blank" data-cat="budgetter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-300"><svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Budget 2023</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Budget</span><span class="text-xs text-forest-400">PDF · 2023</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/budgetter/Budget 2020.pdf" target="_blank" data-cat="budgetter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-300"><svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Budget 2020</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Budget</span><span class="text-xs text-forest-400">PDF · 2020</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/budgetter/Budget 2019.pdf" target="_blank" data-cat="budgetter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-300"><svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Budget 2019</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Budget</span><span class="text-xs text-forest-400">PDF · 2019</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/budgetter/Budget 2018.pdf" target="_blank" data-cat="budgetter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-300"><svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Budget 2018</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Budget</span><span class="text-xs text-forest-400">PDF · 2018</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/budgetter/Budget 2017.pdf" target="_blank" data-cat="budgetter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-300"><svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Budget 2017</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Budget</span><span class="text-xs text-forest-400">PDF · 2017</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/budgetter/Budget 2016.pdf" target="_blank" data-cat="budgetter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-300"><svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Budget 2016</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Budget</span><span class="text-xs text-forest-400">PDF · 2016</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/budgetter/Budget 2015.pdf" target="_blank" data-cat="budgetter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-300"><svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Budget 2015</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Budget</span><span class="text-xs text-forest-400">PDF · 2015</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/budgetter/Budget 2014.pdf" target="_blank" data-cat="budgetter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-300"><svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Budget 2014</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Budget</span><span class="text-xs text-forest-400">PDF · 2014</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/budgetter/Budget 2013.pdf" target="_blank" data-cat="budgetter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-300"><svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Budget 2013</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Budget</span><span class="text-xs text-forest-400">PDF · 2013</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/budgetter/Budget 2012.pdf" target="_blank" data-cat="budgetter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-300"><svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Budget 2012</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Budget</span><span class="text-xs text-forest-400">PDF · 2012</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/budgetter/Budget 2011.pdf" target="_blank" data-cat="budgetter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-300"><svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Budget 2011</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Budget</span><span class="text-xs text-forest-400">PDF · 2011</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/budgetter/Budget 2010.pdf" target="_blank" data-cat="budgetter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-300"><svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Budget 2010</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Budget</span><span class="text-xs text-forest-400">PDF · 2010</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/budgetter/Budget 2009.pdf" target="_blank" data-cat="budgetter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-300"><svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Budget 2009</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Budget</span><span class="text-xs text-forest-400">PDF · 2009</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/budgetter/Budget 2008.pdf" target="_blank" data-cat="budgetter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-300"><svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Budget 2008</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Budget</span><span class="text-xs text-forest-400">PDF · 2008</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/budgetter/Budget 2007.pdf" target="_blank" data-cat="budgetter" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors duration-300"><svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Budget 2007</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Budget</span><span class="text-xs text-forest-400">PDF · 2007</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <!-- ===== REGNSKABER (16 filer) ===== -->
+        <a href="dokumenter/regnskaber/Regnskab 2022.pdf" target="_blank" data-cat="regnskaber" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors duration-300"><svg class="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Regnskab 2022</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-violet-700 bg-violet-50 px-2 py-0.5 rounded-full">Regnskab</span><span class="text-xs text-forest-400">PDF · 2022</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/regnskaber/Regnskab 2021.pdf" target="_blank" data-cat="regnskaber" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors duration-300"><svg class="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Regnskab 2021</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-violet-700 bg-violet-50 px-2 py-0.5 rounded-full">Regnskab</span><span class="text-xs text-forest-400">PDF · 2021</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/regnskaber/Regnskab 2020.pdf" target="_blank" data-cat="regnskaber" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors duration-300"><svg class="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Regnskab 2020</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-violet-700 bg-violet-50 px-2 py-0.5 rounded-full">Regnskab</span><span class="text-xs text-forest-400">PDF · 2020</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/regnskaber/Regnskab 2019.pdf" target="_blank" data-cat="regnskaber" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors duration-300"><svg class="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Regnskab 2019</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-violet-700 bg-violet-50 px-2 py-0.5 rounded-full">Regnskab</span><span class="text-xs text-forest-400">PDF · 2019</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/regnskaber/Regnskab 2018.pdf" target="_blank" data-cat="regnskaber" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors duration-300"><svg class="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Regnskab 2018</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-violet-700 bg-violet-50 px-2 py-0.5 rounded-full">Regnskab</span><span class="text-xs text-forest-400">PDF · 2018</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/regnskaber/Regnskab 2017.pdf" target="_blank" data-cat="regnskaber" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors duration-300"><svg class="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Regnskab 2017</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-violet-700 bg-violet-50 px-2 py-0.5 rounded-full">Regnskab</span><span class="text-xs text-forest-400">PDF · 2017</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/regnskaber/Regnskab 2016.pdf" target="_blank" data-cat="regnskaber" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors duration-300"><svg class="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Regnskab 2016</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-violet-700 bg-violet-50 px-2 py-0.5 rounded-full">Regnskab</span><span class="text-xs text-forest-400">PDF · 2016</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/regnskaber/Regnskab 2015.pdf" target="_blank" data-cat="regnskaber" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors duration-300"><svg class="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Regnskab 2015</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-violet-700 bg-violet-50 px-2 py-0.5 rounded-full">Regnskab</span><span class="text-xs text-forest-400">PDF · 2015</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/regnskaber/Regnskab 2014.pdf" target="_blank" data-cat="regnskaber" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors duration-300"><svg class="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Regnskab 2014</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-violet-700 bg-violet-50 px-2 py-0.5 rounded-full">Regnskab</span><span class="text-xs text-forest-400">PDF · 2014</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/regnskaber/Regnskab 2013.pdf" target="_blank" data-cat="regnskaber" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors duration-300"><svg class="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Regnskab 2013</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-violet-700 bg-violet-50 px-2 py-0.5 rounded-full">Regnskab</span><span class="text-xs text-forest-400">PDF · 2013</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/regnskaber/Regnskab 2012.pdf" target="_blank" data-cat="regnskaber" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors duration-300"><svg class="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Regnskab 2012</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-violet-700 bg-violet-50 px-2 py-0.5 rounded-full">Regnskab</span><span class="text-xs text-forest-400">PDF · 2012</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/regnskaber/Regnskab 2011.pdf" target="_blank" data-cat="regnskaber" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors duration-300"><svg class="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Regnskab 2011</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-violet-700 bg-violet-50 px-2 py-0.5 rounded-full">Regnskab</span><span class="text-xs text-forest-400">PDF · 2011</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/regnskaber/Regnskab 2010.pdf" target="_blank" data-cat="regnskaber" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors duration-300"><svg class="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Regnskab 2010</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-violet-700 bg-violet-50 px-2 py-0.5 rounded-full">Regnskab</span><span class="text-xs text-forest-400">PDF · 2010</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/regnskaber/Regnskab 2009.pdf" target="_blank" data-cat="regnskaber" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors duration-300"><svg class="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Regnskab 2009</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-violet-700 bg-violet-50 px-2 py-0.5 rounded-full">Regnskab</span><span class="text-xs text-forest-400">PDF · 2009</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/regnskaber/Regnskab 2008.pdf" target="_blank" data-cat="regnskaber" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors duration-300"><svg class="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Regnskab 2008</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-violet-700 bg-violet-50 px-2 py-0.5 rounded-full">Regnskab</span><span class="text-xs text-forest-400">PDF · 2008</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/regnskaber/Regnskab 2007.pdf" target="_blank" data-cat="regnskaber" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors duration-300"><svg class="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Regnskab 2007</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-violet-700 bg-violet-50 px-2 py-0.5 rounded-full">Regnskab</span><span class="text-xs text-forest-400">PDF · 2007</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <!-- ===== LOKALPLANER (1 fil) ===== -->
+        <a href="dokumenter/lokalplaner/Lokalplan.pdf" target="_blank" data-cat="lokalplaner" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-earth-100 flex items-center justify-center group-hover:bg-earth-200 transition-colors duration-300">
+            <svg class="w-6 h-6 text-earth-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Lokalplan nr. L 101</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-earth-600 bg-earth-100 px-2 py-0.5 rounded-full">Lokalplan</span>
+              <span class="text-xs text-forest-400">PDF</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <!-- ===== ØVRIGE (3 filer) ===== -->
+        <a href="dokumenter/oevrige/Forretningsorden.pdf" target="_blank" data-cat="oevrige" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center group-hover:bg-stone-200 transition-colors duration-300">
+            <svg class="w-6 h-6 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Forretningsorden</h4>
+            <div class="flex items-center gap-3 mt-1">
+              <span class="text-xs font-body text-stone-600 bg-stone-100 px-2 py-0.5 rounded-full">Øvrige</span>
+              <span class="text-xs text-forest-400">PDF</span>
+            </div>
+          </div>
+          <svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        </a>
+
+        <a href="dokumenter/oevrige/Formandens beretning 2012.pdf" target="_blank" data-cat="oevrige" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center group-hover:bg-stone-200 transition-colors duration-300"><svg class="w-6 h-6 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Formandens beretning 2012</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-stone-600 bg-stone-100 px-2 py-0.5 rounded-full">Øvrige</span><span class="text-xs text-forest-400">PDF · 2012</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+        <a href="dokumenter/oevrige/Brev til medlemmer nov 2012.pdf" target="_blank" data-cat="oevrige" class="doc-item card-lift flex items-center gap-5 bg-white rounded-xl p-5 border border-forest-100 shadow-sm shadow-forest-900/5 group hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400"><div class="flex-shrink-0 w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center group-hover:bg-stone-200 transition-colors duration-300"><svg class="w-6 h-6 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg></div><div class="flex-grow min-w-0"><h4 class="font-body font-medium text-forest-800 group-hover:text-forest-600 transition-colors duration-300 truncate">Brev til medlemmer, november 2012</h4><div class="flex items-center gap-3 mt-1"><span class="text-xs font-body text-stone-600 bg-stone-100 px-2 py-0.5 rounded-full">Øvrige</span><span class="text-xs text-forest-400">PDF · 2012</span></div></div><svg class="flex-shrink-0 w-5 h-5 text-forest-400 group-hover:text-forest-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></a>
+
+      </div>
+
+      <!-- Show more button -->
+      <div id="show-more-wrap" class="text-center mt-8 hidden">
+        <button id="show-more-btn" class="btn-spring inline-flex items-center gap-2 px-8 py-3 bg-white border border-forest-200 rounded-full font-body text-sm font-medium text-forest-700 hover:bg-forest-50 hover:border-forest-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 shadow-sm shadow-forest-900/5">
+          <span id="show-more-text">Vis flere dokumenter</span>
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+      </div>
+
+      <!-- Empty state (shown when filter has no results) -->
+      <div id="empty-state" class="hidden text-center py-16">
+        <svg class="w-16 h-16 text-forest-300 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m6.75 12H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+        <p class="text-forest-500 font-body">Ingen dokumenter i denne kategori endnu.</p>
+      </div>
+
+      <!-- How to add docs info -->
+      <div class="mt-16 p-6 bg-forest-100/50 rounded-2xl border border-forest-200/50">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-forest-200 flex items-center justify-center">
+            <svg class="w-5 h-5 text-forest-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-body font-semibold text-forest-800 mb-1">Mangler du et dokument?</h4>
+            <p class="text-sm font-body text-forest-600/70">Kontakt bestyrelsen på <a href="mailto:mail@alslevnord.dk" class="text-forest-600 underline hover:text-forest-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 rounded">mail@alslevnord.dk</a> hvis du har brug for et dokument der ikke er listet her.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-forest-950 py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <div>
+          <img src="brand_assets/logo-white.svg" alt="Grundejerforeningen Alslev Nord" class="h-10 opacity-70 mb-4">
+          <p class="text-sm font-body text-forest-400/60 leading-relaxed max-w-xs">
+            Grundejerforening for det nordlige Alslev. Sammen passer vi på vores område og skaber fællesskab.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-body text-sm font-semibold tracking-[0.15em] uppercase text-forest-400 mb-4">Genveje</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html#om" class="font-body text-sm text-forest-500 hover:text-forest-300 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 rounded">Om foreningen</a></li>
+            <li><a href="index.html#bestyrelse" class="font-body text-sm text-forest-500 hover:text-forest-300 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 rounded">Bestyrelse</a></li>
+            <li><a href="dokumenter.html" class="font-body text-sm text-forest-300 hover:text-white transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 rounded">Dokumenter</a></li>
+            <li><a href="index.html#kontakt" class="font-body text-sm text-forest-500 hover:text-forest-300 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 rounded">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-body text-sm font-semibold tracking-[0.15em] uppercase text-forest-400 mb-4">Kontakt</h4>
+          <ul class="space-y-3">
+            <li><a href="mailto:mail@alslevnord.dk" class="font-body text-sm text-forest-500 hover:text-forest-300 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 rounded">mail@alslevnord.dk</a></li>
+            <li><span class="font-body text-sm text-forest-500">6800 Varde, Danmark</span></li>
+          </ul>
+          <div class="mt-6">
+            <a href="https://www.facebook.com/groups/2064366053795406?locale=da_DK" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-forest-800 text-forest-400 hover:bg-forest-700 hover:text-forest-300 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400" aria-label="Facebook">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-forest-800/50 pt-8 text-center">
+        <p class="text-xs font-body text-forest-600/40">&copy; 2026 Grundejerforeningen Alslev Nord. Alle rettigheder forbeholdes.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    const headerLogo = document.getElementById('header-logo');
+    const navLinks = document.querySelectorAll('#nav-om, #nav-bestyrelse, #nav-dokumenter');
+    const navKontakt = document.getElementById('nav-kontakt');
+    const darkSection = document.querySelector('section');
+    const darkSectionHeight = darkSection.offsetHeight;
+
+    window.addEventListener('scroll', () => {
+      const pastDark = window.scrollY > darkSectionHeight - 100;
+      if (window.scrollY > 80) {
+        header.style.backgroundColor = pastDark ? 'rgba(244, 247, 242, 0.97)' : 'rgba(30, 46, 25, 0.95)';
+        header.style.backdropFilter = 'blur(12px)';
+        header.style.boxShadow = pastDark ? '0 4px 30px rgba(0,0,0,0.06)' : '0 4px 30px rgba(0,0,0,0.15)';
+      } else {
+        header.style.backgroundColor = 'transparent';
+        header.style.backdropFilter = 'none';
+        header.style.boxShadow = 'none';
+      }
+      if (pastDark) {
+        headerLogo.src = 'brand_assets/logo.svg';
+        navLinks.forEach(l => { l.classList.remove('text-white/90', 'text-white'); l.classList.add('text-forest-800'); l.classList.remove('hover:text-white'); l.classList.add('hover:text-forest-500'); });
+        document.getElementById('nav-dokumenter').style.borderBottomColor = '#476d38';
+        bar1.classList.replace('bg-white', 'bg-forest-800');
+        bar2.classList.replace('bg-white', 'bg-forest-800');
+        bar3.classList.replace('bg-white', 'bg-forest-800');
+      } else {
+        headerLogo.src = 'brand_assets/logo-white.svg';
+        navLinks.forEach(l => { l.classList.remove('text-forest-800'); l.classList.add('text-white/90'); l.classList.remove('hover:text-forest-500'); l.classList.add('hover:text-white'); });
+        document.getElementById('nav-dokumenter').classList.remove('text-white/90');
+        document.getElementById('nav-dokumenter').classList.add('text-white');
+        document.getElementById('nav-dokumenter').style.borderBottomColor = 'rgba(255,255,255,0.5)';
+        bar1.classList.replace('bg-forest-800', 'bg-white');
+        bar2.classList.replace('bg-forest-800', 'bg-white');
+        bar3.classList.replace('bg-forest-800', 'bg-white');
+      }
+    });
+
+    // Mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const bar1 = document.getElementById('bar1');
+    const bar2 = document.getElementById('bar2');
+    const bar3 = document.getElementById('bar3');
+    let menuOpen = false;
+
+    menuToggle.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        mobileMenu.classList.add('open');
+        bar1.style.transform = 'rotate(45deg) translate(4px, 4px)';
+        bar2.style.opacity = '0';
+        bar3.style.transform = 'rotate(-45deg) translate(4px, -4px)';
+      } else {
+        closeMobile();
+      }
+    });
+
+    function closeMobile() {
+      menuOpen = false;
+      mobileMenu.classList.remove('open');
+      bar1.style.transform = 'none';
+      bar2.style.opacity = '1';
+      bar3.style.transform = 'none';
+    }
+
+    // Category filter + show more
+    const catBtns = document.querySelectorAll('.cat-btn');
+    const docItems = document.querySelectorAll('.doc-item');
+    const emptyState = document.getElementById('empty-state');
+    const showMoreWrap = document.getElementById('show-more-wrap');
+    const showMoreBtn = document.getElementById('show-more-btn');
+    const showMoreText = document.getElementById('show-more-text');
+    const INITIAL_SHOW = 6;
+    let showAll = false;
+
+    function applyFilter(cat) {
+      let matchingItems = [];
+      docItems.forEach(item => {
+        if (cat === 'all' || item.dataset.cat === cat) {
+          matchingItems.push(item);
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      const total = matchingItems.length;
+      const limit = showAll ? total : INITIAL_SHOW;
+
+      matchingItems.forEach((item, i) => {
+        item.style.display = i < limit ? 'flex' : 'none';
+      });
+
+      emptyState.classList.toggle('hidden', total > 0);
+
+      if (total > INITIAL_SHOW && !showAll) {
+        showMoreWrap.classList.remove('hidden');
+        const hidden = total - INITIAL_SHOW;
+        showMoreText.textContent = `Vis ${hidden} flere dokumenter`;
+      } else {
+        showMoreWrap.classList.add('hidden');
+      }
+    }
+
+    let activeCat = 'all';
+
+    catBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        catBtns.forEach(b => {
+          b.classList.remove('active', 'bg-forest-700', 'text-white', 'border-forest-700');
+          b.classList.add('bg-white', 'text-forest-700', 'border-forest-200');
+        });
+        btn.classList.add('active', 'bg-forest-700', 'text-white', 'border-forest-700');
+        btn.classList.remove('bg-white', 'text-forest-700', 'border-forest-200');
+        activeCat = btn.dataset.cat;
+        showAll = false;
+        applyFilter(activeCat);
+      });
+    });
+
+    showMoreBtn.addEventListener('click', () => {
+      showAll = true;
+      applyFilter(activeCat);
+    });
+
+    // Initial load — show first 6
+    applyFilter('all');
+  </script>
+</body>
+</html>

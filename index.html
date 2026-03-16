@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grundejerforeningen Alslev Nord — Varde</title>
+  <meta name="description" content="Grundejerforeningen Alslev Nord i Varde. Find information om bestyrelsen, vedtægter, referater, budgetter og kontaktoplysninger.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/svg+xml" href="brand_assets/favicon.svg">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Grundejerforeningen Alslev Nord">
+  <meta property="og:description" content="Grundejerforeningen Alslev Nord i Varde. Bestyrelse, vedtægter, referater og kontakt.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alslevnord.dk">
+  <meta property="og:locale" content="da_DK">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              50: '#f4f7f2',
+              100: '#e6ede2',
+              200: '#cedbc6',
+              300: '#a8c29b',
+              400: '#7da56c',
+              500: '#5c884a',
+              600: '#476d38',
+              700: '#39572e',
+              800: '#2f4626',
+              900: '#1e2e19',
+              950: '#111a0e',
+            },
+            earth: {
+              50: '#faf8f5',
+              100: '#f2ede6',
+              200: '#e5dace',
+              300: '#d4c2ad',
+              400: '#bfa388',
+              500: '#a8876a',
+              600: '#8f6e54',
+              700: '#755846',
+              800: '#5e483b',
+              900: '#4a3a31',
+            },
+          },
+          fontFamily: {
+            display: ['"DM Serif Display"', 'serif'],
+            body: ['"Outfit"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; line-height: 1.7; color: #2f4626; }
+
+    /* Grain texture overlay */
+    .grain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Heading styles */
+    h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; letter-spacing: -0.03em; }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f4f7f2; }
+    ::-webkit-scrollbar-thumb { background: #a8c29b; border-radius: 4px; }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .animate-fade-up {
+      animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      opacity: 0;
+    }
+    .animate-fade-in {
+      animation: fadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      opacity: 0;
+    }
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .delay-400 { animation-delay: 0.4s; }
+    .delay-500 { animation-delay: 0.5s; }
+    .delay-600 { animation-delay: 0.6s; }
+
+    /* Button hover spring */
+    .btn-spring {
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    }
+    .btn-spring:hover {
+      transform: translateY(-2px);
+    }
+    .btn-spring:active {
+      transform: translateY(0px);
+    }
+
+    /* Card hover */
+    .card-lift {
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+    }
+    .card-lift:hover {
+      transform: translateY(-4px);
+    }
+
+    /* Nav link underline effect */
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #476d38;
+      transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .nav-link:hover::after,
+    .nav-link:focus-visible::after {
+      width: 100%;
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+  </style>
+</head>
+<body class="bg-forest-50">
+
+  <!-- ==================== HEADER ==================== -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="transition-property: background-color, box-shadow, padding;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
+      <a href="#" class="flex items-center gap-3 relative z-50">
+        <img src="brand_assets/logo-white.svg" alt="Grundejerforeningen Alslev Nord" class="h-10" id="header-logo">
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#om" class="nav-link font-body text-sm font-medium tracking-wide uppercase text-white/90 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 focus-visible:ring-offset-2 rounded" id="nav-om">Om os</a>
+        <a href="#bestyrelse" class="nav-link font-body text-sm font-medium tracking-wide uppercase text-white/90 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 focus-visible:ring-offset-2 rounded" id="nav-bestyrelse">Bestyrelse</a>
+        <a href="dokumenter.html" class="nav-link font-body text-sm font-medium tracking-wide uppercase text-white/90 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 focus-visible:ring-offset-2 rounded" id="nav-dokumenter">Dokumenter</a>
+        <a href="#kontakt" class="btn-spring inline-flex items-center px-5 py-2.5 bg-forest-600 text-white text-sm font-medium rounded-full hover:bg-forest-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 focus-visible:ring-offset-2 shadow-lg shadow-forest-900/20" id="nav-kontakt">Kontakt os</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 rounded" aria-label="Menu">
+        <span class="block w-6 h-0.5 bg-white transition-transform duration-300" id="bar1"></span>
+        <span class="block w-6 h-0.5 bg-white transition-opacity duration-300" id="bar2"></span>
+        <span class="block w-6 h-0.5 bg-white transition-transform duration-300" id="bar3"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu fixed inset-0 z-40 bg-forest-950 flex flex-col items-center justify-center gap-8">
+    <a href="#om" class="text-2xl font-display text-white/90 hover:text-white" onclick="closeMobile()">Om os</a>
+    <a href="#bestyrelse" class="text-2xl font-display text-white/90 hover:text-white" onclick="closeMobile()">Bestyrelse</a>
+    <a href="dokumenter.html" class="text-2xl font-display text-white/90 hover:text-white" onclick="closeMobile()">Dokumenter</a>
+    <a href="#kontakt" class="text-2xl font-display text-white/90 hover:text-white" onclick="closeMobile()">Kontakt os</a>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden grain">
+    <!-- Background image -->
+    <div class="absolute inset-0">
+      <img src="https://placehold.co/1920x1080/2f4626/2f4626" alt="" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-b from-forest-950/70 via-forest-900/50 to-forest-950/80"></div>
+      <div class="absolute inset-0 bg-forest-800/30 mix-blend-multiply"></div>
+      <!-- Radial gradient accents for depth -->
+      <div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-forest-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-earth-400/8 rounded-full blur-3xl"></div>
+    </div>
+    <!-- Content -->
+    <div class="relative z-10 text-center px-6 max-w-3xl mx-auto">
+      <div class="animate-fade-up">
+        <img src="brand_assets/logo-white.svg" alt="" class="h-16 md:h-20 mx-auto mb-8 opacity-90">
+      </div>
+      <h1 class="animate-fade-up delay-200 text-4xl md:text-6xl lg:text-7xl font-display text-white leading-tight mb-6">
+        Velkommen til<br><span class="text-forest-300">Alslev Nord</span>
+      </h1>
+      <p class="animate-fade-up delay-300 text-lg md:text-xl text-white/70 font-body font-light max-w-xl mx-auto mb-10 leading-relaxed">
+        Grundejerforening for det nordlige Alslev med ca. 106 medlemmer &mdash; sammen skaber vi et godt nabolag.
+      </p>
+      <div class="animate-fade-up delay-400 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#om" class="btn-spring inline-flex items-center justify-center px-8 py-3.5 bg-forest-600 text-white font-medium rounded-full hover:bg-forest-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 focus-visible:ring-offset-2 focus-visible:ring-offset-forest-950 shadow-lg shadow-forest-900/40">
+          Læs mere om os
+        </a>
+        <a href="#kontakt" class="btn-spring inline-flex items-center justify-center px-8 py-3.5 border-2 border-white/20 text-white font-medium rounded-full hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 focus-visible:ring-offset-2 focus-visible:ring-offset-forest-950">
+          Kontakt bestyrelsen
+        </a>
+      </div>
+    </div>
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in delay-600">
+      <div class="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-1.5">
+        <div class="w-1.5 h-3 bg-white/50 rounded-full" style="animation: fadeUp 1.5s ease-in-out infinite;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== OM OS ==================== -->
+  <section id="om" class="relative py-24 md:py-32 bg-forest-50 grain">
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+        <!-- Left column -->
+        <div>
+          <span class="inline-block font-body text-xs font-semibold tracking-[0.2em] uppercase text-forest-500 mb-4">Om foreningen</span>
+          <h2 class="text-3xl md:text-5xl font-display text-forest-900 leading-tight mb-8">
+            Et fællesskab i<br>det nordlige Alslev
+          </h2>
+          <div class="space-y-5 text-forest-800/80 font-body leading-relaxed">
+            <p>
+              Grundejerforening Alslev Nord dækker som foreningens navn antyder det nordlige Alslev. Vi har ca. <strong class="text-forest-800 font-semibold">106 medlemmer</strong> i foreningen.
+            </p>
+            <p>
+              Foreningen omfatter ejere af parcelhusgrunde omfattet af <strong class="text-forest-800 font-semibold">lokalplan nr. L&nbsp;101</strong>.
+            </p>
+          </div>
+        </div>
+        <!-- Right column: Formål -->
+        <div class="bg-white rounded-2xl p-8 md:p-10 shadow-sm shadow-forest-900/5 border border-forest-100">
+          <h3 class="text-2xl font-display text-forest-900 mb-6">Foreningens formål</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-forest-100 flex items-center justify-center mt-0.5">
+                <svg class="w-5 h-5 text-forest-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <p class="font-body text-forest-800/80 leading-relaxed">Varetage medlemmernes fælles interesser og forestå vedligeholdelse af stiarealer og grønne områder, jfr. §&nbsp;8 og §&nbsp;10 i lokalplan nr. L&nbsp;101.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-forest-100 flex items-center justify-center mt-0.5">
+                <svg class="w-5 h-5 text-forest-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+              </div>
+              <div>
+                <p class="font-body text-forest-800/80 leading-relaxed">Arrangere fælles arrangementer efter generalforsamlingens nærmere beslutning.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 md:mt-24">
+        <div class="text-center p-6 bg-white rounded-2xl border border-forest-100 shadow-sm shadow-forest-900/5">
+          <div class="text-3xl md:text-4xl font-display text-forest-700 mb-2">106</div>
+          <div class="text-sm font-body text-forest-600/70 uppercase tracking-wider">Medlemmer</div>
+        </div>
+        <div class="text-center p-6 bg-white rounded-2xl border border-forest-100 shadow-sm shadow-forest-900/5">
+          <div class="text-3xl md:text-4xl font-display text-forest-700 mb-2">L 101</div>
+          <div class="text-sm font-body text-forest-600/70 uppercase tracking-wider">Lokalplan</div>
+        </div>
+        <div class="text-center p-6 bg-white rounded-2xl border border-forest-100 shadow-sm shadow-forest-900/5">
+          <div class="text-3xl md:text-4xl font-display text-forest-700 mb-2">7</div>
+          <div class="text-sm font-body text-forest-600/70 uppercase tracking-wider">Bestyrelsesmedl.</div>
+        </div>
+        <div class="text-center p-6 bg-white rounded-2xl border border-forest-100 shadow-sm shadow-forest-900/5">
+          <div class="text-3xl md:text-4xl font-display text-forest-700 mb-2">6800</div>
+          <div class="text-sm font-body text-forest-600/70 uppercase tracking-wider">Varde</div>
+        </div>
+      </div>
+
+      <!-- Vedtægter download -->
+      <div class="mt-16 md:mt-20">
+        <a href="dokumenter/vedtaegter/Vedtaegter.pdf" target="_blank" class="card-lift group flex items-center gap-6 bg-forest-900 rounded-2xl p-6 md:p-8 shadow-lg shadow-forest-900/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 focus-visible:ring-offset-2">
+          <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-forest-700 flex items-center justify-center group-hover:bg-forest-600 transition-colors duration-300">
+            <svg class="w-7 h-7 text-forest-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+          </div>
+          <div class="flex-grow min-w-0">
+            <h4 class="font-display text-xl text-white mb-1">Vedtægter</h4>
+            <p class="font-body text-sm text-forest-300/70">Download foreningens gældende vedtægter (PDF)</p>
+          </div>
+          <div class="flex-shrink-0">
+            <svg class="w-6 h-6 text-forest-400 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BESTYRELSE ==================== -->
+  <section id="bestyrelse" class="relative py-24 md:py-32 bg-white grain">
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block font-body text-xs font-semibold tracking-[0.2em] uppercase text-forest-500 mb-4">Bestyrelsen</span>
+        <h2 class="text-3xl md:text-5xl font-display text-forest-900 leading-tight mb-4">Mød vores bestyrelse</h2>
+        <p class="text-forest-700/60 font-body max-w-lg mx-auto">Bestyrelsen varetager foreningens daglige drift og repræsenterer medlemmernes interesser.</p>
+      </div>
+
+      <!-- Formand + Næstformand + Kasserer -->
+      <div class="grid md:grid-cols-3 gap-6 mb-6">
+        <!-- Formand -->
+        <div class="card-lift bg-forest-50 rounded-2xl p-8 text-center border border-forest-100 shadow-sm shadow-forest-900/5">
+          <div class="w-20 h-20 rounded-full bg-forest-200 mx-auto mb-5 flex items-center justify-center">
+            <svg class="w-8 h-8 text-forest-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <span class="inline-block text-xs font-body font-semibold tracking-[0.15em] uppercase text-forest-500 bg-forest-100 px-3 py-1 rounded-full mb-3">Formand</span>
+          <h3 class="text-xl font-display text-forest-900 mb-1">René Reinholdt-Egsgaard</h3>
+          <p class="text-sm font-body text-forest-600/70">Saturnvej 32</p>
+        </div>
+        <!-- Næstformand -->
+        <div class="card-lift bg-forest-50 rounded-2xl p-8 text-center border border-forest-100 shadow-sm shadow-forest-900/5">
+          <div class="w-20 h-20 rounded-full bg-forest-200 mx-auto mb-5 flex items-center justify-center">
+            <svg class="w-8 h-8 text-forest-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <span class="inline-block text-xs font-body font-semibold tracking-[0.15em] uppercase text-forest-500 bg-forest-100 px-3 py-1 rounded-full mb-3">Næstformand</span>
+          <h3 class="text-xl font-display text-forest-900 mb-1">Steffen Andersen</h3>
+          <p class="text-sm font-body text-forest-600/70">Saturnvej 30</p>
+        </div>
+        <!-- Kasserer -->
+        <div class="card-lift bg-forest-50 rounded-2xl p-8 text-center border border-forest-100 shadow-sm shadow-forest-900/5">
+          <div class="w-20 h-20 rounded-full bg-forest-200 mx-auto mb-5 flex items-center justify-center">
+            <svg class="w-8 h-8 text-forest-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <span class="inline-block text-xs font-body font-semibold tracking-[0.15em] uppercase text-forest-500 bg-forest-100 px-3 py-1 rounded-full mb-3">Kasserer</span>
+          <h3 class="text-xl font-display text-forest-900 mb-1">Kim Bilgaard Jensen</h3>
+          <p class="text-sm font-body text-forest-600/70">Saturnvej 28</p>
+        </div>
+      </div>
+
+      <!-- Bestyrelsesmedlemmer -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card-lift bg-forest-50 rounded-2xl p-6 text-center border border-forest-100 shadow-sm shadow-forest-900/5">
+          <div class="w-16 h-16 rounded-full bg-forest-200 mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-7 h-7 text-forest-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <span class="inline-block text-xs font-body font-medium tracking-wider uppercase text-forest-500/70 mb-2">Medlem</span>
+          <h3 class="text-lg font-display text-forest-900 mb-1">Karsten Svendsen</h3>
+          <p class="text-sm font-body text-forest-600/70">Saturnvej 25</p>
+        </div>
+        <div class="card-lift bg-forest-50 rounded-2xl p-6 text-center border border-forest-100 shadow-sm shadow-forest-900/5">
+          <div class="w-16 h-16 rounded-full bg-forest-200 mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-7 h-7 text-forest-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <span class="inline-block text-xs font-body font-medium tracking-wider uppercase text-forest-500/70 mb-2">Medlem</span>
+          <h3 class="text-lg font-display text-forest-900 mb-1">Jan Møller</h3>
+          <p class="text-sm font-body text-forest-600/70">Uranusvej 23</p>
+        </div>
+        <div class="card-lift bg-forest-50 rounded-2xl p-6 text-center border border-forest-100 shadow-sm shadow-forest-900/5">
+          <div class="w-16 h-16 rounded-full bg-forest-200 mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-7 h-7 text-forest-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <span class="inline-block text-xs font-body font-medium tracking-wider uppercase text-forest-500/70 mb-2">Medlem</span>
+          <h3 class="text-lg font-display text-forest-900 mb-1">Daniel Sørensen</h3>
+          <p class="text-sm font-body text-forest-600/70">Saturnvej 27</p>
+        </div>
+        <div class="card-lift bg-forest-50 rounded-2xl p-6 text-center border border-forest-100 shadow-sm shadow-forest-900/5">
+          <div class="w-16 h-16 rounded-full bg-forest-200 mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-7 h-7 text-forest-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <span class="inline-block text-xs font-body font-medium tracking-wider uppercase text-forest-500/70 mb-2">Medlem</span>
+          <h3 class="text-lg font-display text-forest-900 mb-1">Thomas K. K. Josephsen</h3>
+          <p class="text-sm font-body text-forest-600/70">Saturnvej 37</p>
+        </div>
+      </div>
+
+      <!-- Fælles kontakt -->
+      <div class="mt-12 text-center">
+        <a href="mailto:mail@alslevnord.dk" class="btn-spring inline-flex items-center gap-3 px-8 py-4 bg-forest-700 text-white font-body font-medium rounded-full hover:bg-forest-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 focus-visible:ring-offset-2 shadow-lg shadow-forest-900/20">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+          mail@alslevnord.dk
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DOKUMENTER TEASER ==================== -->
+  <section class="relative py-24 md:py-32 bg-earth-50 grain">
+    <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <span class="inline-block font-body text-xs font-semibold tracking-[0.2em] uppercase text-forest-500 mb-4">Dokumenter</span>
+      <h2 class="text-3xl md:text-5xl font-display text-forest-900 leading-tight mb-4">Dokumenter &amp; referater</h2>
+      <p class="text-forest-700/60 font-body max-w-lg mx-auto mb-10">Referater fra generalforsamlinger, vedtægter, lokalplaner og andre relevante dokumenter for foreningen.</p>
+      <a href="dokumenter.html" class="btn-spring inline-flex items-center gap-3 px-8 py-4 bg-forest-700 text-white font-body font-medium rounded-full hover:bg-forest-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 focus-visible:ring-offset-2 shadow-lg shadow-forest-900/20">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+        Se alle dokumenter
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== KONTAKT ==================== -->
+  <section id="kontakt" class="relative py-24 md:py-32 bg-forest-900 grain overflow-hidden">
+    <!-- Decorative gradients -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-forest-600/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-earth-500/10 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16">
+        <!-- Left -->
+        <div>
+          <span class="inline-block font-body text-xs font-semibold tracking-[0.2em] uppercase text-forest-400 mb-4">Kontakt</span>
+          <h2 class="text-3xl md:text-5xl font-display text-white leading-tight mb-6">Skriv til os</h2>
+          <p class="text-forest-300/70 font-body leading-relaxed mb-8 max-w-md">
+            Har du spørgsmål til bestyrelsen eller forslag til foreningen? Du er altid velkommen til at kontakte os.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-xl bg-forest-800 flex items-center justify-center">
+                <svg class="w-5 h-5 text-forest-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+              </div>
+              <a href="mailto:mail@alslevnord.dk" class="font-body text-forest-200 hover:text-white transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 rounded">mail@alslevnord.dk</a>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-xl bg-forest-800 flex items-center justify-center">
+                <svg class="w-5 h-5 text-forest-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+              </div>
+              <span class="font-body text-forest-200">6800 Varde, Danmark</span>
+            </div>
+          </div>
+        </div>
+        <!-- Right: Contact form -->
+        <div class="bg-forest-800/50 backdrop-blur-sm rounded-2xl p-8 border border-forest-700/50">
+          <!-- Feedback-besked -->
+          <div id="kontakt-ok" class="hidden mb-5 p-4 bg-green-800/40 border border-green-600/40 rounded-xl text-green-300 font-body text-sm">
+            Tak for din besked! Vi vender tilbage hurtigst muligt.
+          </div>
+          <div id="kontakt-fejl" class="hidden mb-5 p-4 bg-red-800/40 border border-red-600/40 rounded-xl text-red-300 font-body text-sm">
+            Noget gik galt — prøv venligst igen, eller skriv direkte til mail@alslevnord.dk.
+          </div>
+          <form action="contact.php" method="POST" class="space-y-5">
+            <!-- Honeypot — skjult for brugere, bots udfylder det -->
+            <div class="absolute opacity-0 -z-10" aria-hidden="true" tabindex="-1">
+              <label>Udfyld ikke dette felt<input type="text" name="website" autocomplete="off" tabindex="-1"></label>
+            </div>
+            <div>
+              <label class="block text-sm font-body font-medium text-forest-300 mb-2">Navn</label>
+              <input type="text" name="name" required placeholder="Dit fulde navn" class="w-full px-4 py-3 bg-forest-900/50 border border-forest-700/50 rounded-xl text-white placeholder-forest-600 font-body focus:outline-none focus:ring-2 focus:ring-forest-500 focus:border-transparent transition-shadow duration-300">
+            </div>
+            <div>
+              <label class="block text-sm font-body font-medium text-forest-300 mb-2">Email</label>
+              <input type="email" name="email" required placeholder="din@email.dk" class="w-full px-4 py-3 bg-forest-900/50 border border-forest-700/50 rounded-xl text-white placeholder-forest-600 font-body focus:outline-none focus:ring-2 focus:ring-forest-500 focus:border-transparent transition-shadow duration-300">
+            </div>
+            <div>
+              <label class="block text-sm font-body font-medium text-forest-300 mb-2">Besked</label>
+              <textarea rows="4" name="message" required placeholder="Skriv din besked her..." class="w-full px-4 py-3 bg-forest-900/50 border border-forest-700/50 rounded-xl text-white placeholder-forest-600 font-body focus:outline-none focus:ring-2 focus:ring-forest-500 focus:border-transparent transition-shadow duration-300 resize-none"></textarea>
+            </div>
+            <button type="submit" class="btn-spring w-full px-8 py-3.5 bg-forest-500 text-white font-body font-medium rounded-xl hover:bg-forest-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-300 focus-visible:ring-offset-2 focus-visible:ring-offset-forest-900 shadow-lg shadow-forest-900/40 active:bg-forest-600">
+              Send besked
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-forest-950 py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <!-- Logo + description -->
+        <div>
+          <img src="brand_assets/logo-white.svg" alt="Grundejerforeningen Alslev Nord" class="h-10 opacity-70 mb-4">
+          <p class="text-sm font-body text-forest-400/60 leading-relaxed max-w-xs">
+            Grundejerforening for det nordlige Alslev. Sammen passer vi på vores område og skaber fællesskab.
+          </p>
+        </div>
+        <!-- Quick links -->
+        <div>
+          <h4 class="font-body text-sm font-semibold tracking-[0.15em] uppercase text-forest-400 mb-4">Genveje</h4>
+          <ul class="space-y-3">
+            <li><a href="#om" class="font-body text-sm text-forest-500 hover:text-forest-300 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 rounded">Om foreningen</a></li>
+            <li><a href="#bestyrelse" class="font-body text-sm text-forest-500 hover:text-forest-300 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 rounded">Bestyrelse</a></li>
+            <li><a href="dokumenter.html" class="font-body text-sm text-forest-500 hover:text-forest-300 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 rounded">Dokumenter</a></li>
+            <li><a href="#kontakt" class="font-body text-sm text-forest-500 hover:text-forest-300 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 rounded">Kontakt</a></li>
+          </ul>
+        </div>
+        <!-- Contact + social -->
+        <div>
+          <h4 class="font-body text-sm font-semibold tracking-[0.15em] uppercase text-forest-400 mb-4">Kontakt</h4>
+          <ul class="space-y-3">
+            <li><a href="mailto:mail@alslevnord.dk" class="font-body text-sm text-forest-500 hover:text-forest-300 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400 rounded">mail@alslevnord.dk</a></li>
+            <li><span class="font-body text-sm text-forest-500">6800 Varde, Danmark</span></li>
+          </ul>
+          <div class="mt-6">
+            <a href="https://www.facebook.com/groups/2064366053795406?locale=da_DK" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-forest-800 text-forest-400 hover:bg-forest-700 hover:text-forest-300 transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-400" aria-label="Facebook">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-forest-800/50 pt-8 text-center">
+        <p class="text-xs font-body text-forest-600/40">&copy; 2026 Grundejerforeningen Alslev Nord. Alle rettigheder forbeholdes.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    const headerLogo = document.getElementById('header-logo');
+    const navLinks = document.querySelectorAll('#nav-om, #nav-bestyrelse, #nav-dokumenter');
+
+    const heroHeight = document.querySelector('section').offsetHeight;
+
+    window.addEventListener('scroll', () => {
+      const pastHero = window.scrollY > heroHeight - 100;
+      if (window.scrollY > 80) {
+        header.style.backgroundColor = pastHero ? 'rgba(244, 247, 242, 0.97)' : 'rgba(30, 46, 25, 0.95)';
+        header.style.backdropFilter = 'blur(12px)';
+        header.style.boxShadow = pastHero ? '0 4px 30px rgba(0,0,0,0.06)' : '0 4px 30px rgba(0,0,0,0.15)';
+      } else {
+        header.style.backgroundColor = 'transparent';
+        header.style.backdropFilter = 'none';
+        header.style.boxShadow = 'none';
+      }
+      // Switch logo and nav colors based on section
+      if (pastHero) {
+        headerLogo.src = 'brand_assets/logo.svg';
+        navLinks.forEach(l => { l.classList.remove('text-white/90'); l.classList.add('text-forest-800'); l.classList.remove('hover:text-white'); l.classList.add('hover:text-forest-500'); });
+        document.getElementById('nav-kontakt').classList.remove('text-white');
+        bar1.classList.replace('bg-white', 'bg-forest-800');
+        bar2.classList.replace('bg-white', 'bg-forest-800');
+        bar3.classList.replace('bg-white', 'bg-forest-800');
+      } else {
+        headerLogo.src = 'brand_assets/logo-white.svg';
+        navLinks.forEach(l => { l.classList.remove('text-forest-800'); l.classList.add('text-white/90'); l.classList.remove('hover:text-forest-500'); l.classList.add('hover:text-white'); });
+        document.getElementById('nav-kontakt').classList.add('text-white');
+        bar1.classList.replace('bg-forest-800', 'bg-white');
+        bar2.classList.replace('bg-forest-800', 'bg-white');
+        bar3.classList.replace('bg-forest-800', 'bg-white');
+      }
+    });
+
+    // Mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const bar1 = document.getElementById('bar1');
+    const bar2 = document.getElementById('bar2');
+    const bar3 = document.getElementById('bar3');
+    let menuOpen = false;
+
+    menuToggle.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        mobileMenu.classList.add('open');
+        bar1.style.transform = 'rotate(45deg) translate(4px, 4px)';
+        bar2.style.opacity = '0';
+        bar3.style.transform = 'rotate(-45deg) translate(4px, -4px)';
+      } else {
+        closeMobile();
+      }
+    });
+
+    function closeMobile() {
+      menuOpen = false;
+      mobileMenu.classList.remove('open');
+      bar1.style.transform = 'none';
+      bar2.style.opacity = '1';
+      bar3.style.transform = 'none';
+    }
+
+    // Scroll-triggered animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-up');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('section:not(:first-child) h2, section:not(:first-child) .card-lift').forEach(el => {
+      el.style.opacity = '0';
+      observer.observe(el);
+    });
+
+    // Kontaktformular feedback
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('kontakt') === 'ok') {
+      document.getElementById('kontakt-ok').classList.remove('hidden');
+    } else if (params.get('kontakt') === 'fejl') {
+      document.getElementById('kontakt-fejl').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
