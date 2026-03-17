@@ -1,6 +1,12 @@
 <?php
-// Modtager-email
-$to = 'mail@alslevnord.dk';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require 'config.php';
+require 'PHPMailer.php';
+require 'SMTP.php';
+require 'Exception.php';
 
 // Honeypot — hvis feltet er udfyldt, er det en bot
 if (!empty($_POST['website'])) {
@@ -19,20 +25,29 @@ if (empty($name) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL
     exit;
 }
 
-// Byg email
-$subject = "Besked fra alslevnord.dk: $name";
-$body    = "Navn: $name\n";
-$body   .= "Email: $email\n\n";
-$body   .= "Besked:\n$message\n";
+// Send via PHPMailer
+$mail = new PHPMailer(true);
 
-$headers  = "From: noreply@alslevnord.dk\r\n";
-$headers .= "Reply-To: $email\r\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+try {
+    $mail->isSMTP();
+    $mail->Host       = 'send.one.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = SMTP_USER;
+    $mail->Password   = SMTP_PASS;
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = 587;
+    $mail->CharSet    = 'UTF-8';
 
-// Send
-if (mail($to, $subject, $body, $headers)) {
+    $mail->setFrom('mail@alslevnord.dk', 'Alslevnord.dk');
+    $mail->addAddress('mail@alslevnord.dk');
+    $mail->addReplyTo($email, $name);
+
+    $mail->Subject = "Besked fra alslevnord.dk: $name";
+    $mail->Body    = "Navn: $name\nEmail: $email\n\nBesked:\n$message";
+
+    $mail->send();
     header('Location: index.html?kontakt=ok#kontakt');
-} else {
+} catch (Exception $e) {
     header('Location: index.html?kontakt=fejl#kontakt');
 }
 exit;

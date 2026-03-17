@@ -7,3 +7,5 @@ temporary screenshots/
 CLAUDE.md
 .claude/
 *.docx
+config.php
+Email/
